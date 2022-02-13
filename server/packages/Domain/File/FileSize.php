@@ -17,7 +17,7 @@ class FileSize extends Entity
         if(!$this->fileSize){
             throw new \InvalidArgumentException('ファイルサイズは必須です。');
         }
-        $this->fileSizeByte = $this->fileSize / $unit->unit();
+        $this->fileSizeByte = $this->fileSize * $unit->unit();
     }
 
     //指定した単位でファイルサイズを表示する。
